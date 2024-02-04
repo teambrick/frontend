@@ -6,7 +6,7 @@ import NavigationBar from './components/NavigationBar'
 const PageHandler = () => {
     return (
         <div>
-            <div className="h-screen">
+            <div className="min-h-screen">
                 <NavigationBar />
                 <Outlet />
             </div>
