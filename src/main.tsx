@@ -1,20 +1,27 @@
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import { BrowserRouter } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import './index.css'
+import Recipe, {loader as recipeLoader} from './components/Recipe.tsx';
+import React from 'react';
+import PageHandler from './PageHandler.tsx';
 
-/*
+
 const router = createBrowserRouter([
     {
-        path: "/recipe/:recipeId",
-        element: <Recipe />,
-        loader: contactLoader,
+        path: "/",
+        element: <PageHandler />,
+        children: [
+        {
+            path: "/recipe/:recipeId",
+            element: <Recipe />,
+            loader: recipeLoader,
+        },],
     }
 ])
-*/
+
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+    <React.StrictMode>
+        <RouterProvider router={router} />
+    </React.StrictMode>
 )
