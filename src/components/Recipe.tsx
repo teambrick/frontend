@@ -1,5 +1,6 @@
 import { useLoaderData } from "react-router-dom"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import { Separator } from "./ui/separator";
 
 export async function loader({ params }: {params: {recipeId: string}}) {
     // TODO: actually fetch, plus ingredients
@@ -10,15 +11,12 @@ export async function loader({ params }: {params: {recipeId: string}}) {
 
 const Recipe = () => {
     const {recipe} = useLoaderData();
-    return <Card className="w-full">
-        <CardHeader>
-            <CardTitle>{recipe.name}</CardTitle>
-            <CardDescription>{recipe.description}</CardDescription>
-        </CardHeader>
-        <CardContent>
+    return <div>
+            <b className="text-xl">{recipe.name}</b>
+            <p className="text-sm text-muted-foreground">{recipe.description}</p>
+            <Separator />
             {recipe.method}
-        </CardContent>
-    </Card>
+        </div>
 }
 
 export default Recipe
