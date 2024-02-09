@@ -72,7 +72,7 @@ const Menus:{title:string, items:{title:string, href:string, desc:string}[]}[] =
 const NavigationBar = () => {
     const globalCtx = useContext(GlobalContext);
     return <>
-        <NavigationMenu className="w-full">
+        <NavigationMenu className="w-full relative">
             <NavigationMenuList className="relative w-full">
                 <NavigationMenuItem>
                     <NavigationMenuTrigger>{globalCtx.brand.name}</NavigationMenuTrigger>
@@ -125,7 +125,7 @@ const NavigationBar = () => {
                         </NavigationMenuLink>
                     </Link>
                 </NavigationMenuItem>
-                <NavigationMenuItem className="right-0">
+                <NavigationMenuItem className="ml-auto">
                     <ThemeToggle />
                 </NavigationMenuItem>
             </NavigationMenuList>

@@ -21,6 +21,7 @@ const router = createBrowserRouter([
     }
 ])
 
+document.getElementById('root')!.classList.add('w-full')
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
@@ -31,3 +32,4 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         </ThemeProvider>
     </React.StrictMode>
 )
+

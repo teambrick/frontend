@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
 // TODO: pick good names and everything
-export const GlobalContext = createContext({"brand":{"name":"Petrichor", "desc":"DESC"}})
+export const GlobalContext = createContext({"brand":{"name":"Petrichor", "desc":"DESC", "tagline":"TAGLINE"}})
 
 type Theme = "dark" | "light" | "system"
 
