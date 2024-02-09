@@ -1,8 +1,7 @@
 import { useLoaderData } from "react-router-dom"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Separator } from "./ui/separator";
 
-export async function loader({ params }: {params: {recipeId: string}}) {
+export async function loader({ params }) {
     // TODO: actually fetch, plus ingredients
     console.log(`Get recipe-id ${params.recipeId}`)
     const recipe = { "name": "Pina Coladas", "description": "everyone's favourite use of coconuts", "method": "1. coconut!!" };
